@@ -1,0 +1,286 @@
+.first-header-bar {
+    background-color: #D7EC4F;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.second-header-bar {
+    background-color: #F5FFB8;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav.nav-pills {
+    list-style-type: none; /* Убрать маркеры списка */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Выравнивание по центру (если нужно) */
+    height: 100%;
+    line-height: 51px;
+}
+
+.nav-item {
+    display: inline-block; /* Разместить элементы по горизонтали */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar-custom-text {
+    font-size: 24px;
+    padding: 0 16px;
+    margin: 0;
+    color: #005823;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbar-custom-text-active {
+    font-size: 24px;
+    padding: 12px 16px;
+    color: #FFFFFF;
+    background-color: #3AAD30;
+    text-decoration: none;
+    height: 100%;
+    line-height: 51px;
+}
+
+.navbar-custom-text:hover {
+    color: #00ab4e;
+}
+
+.navbar-custom-text:active {
+    /* Дополнительные стили при активном состоянии, если необходимо */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 8px;
+    color: #005823
+}
+
+.icons img {
+    width: 70px;
+    height: 24px;
+    margin: 0 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sideded-logo img {
+    width: 36px;
+    height: 36px;
+    margin: 0 8px;
+}
+
+@font-face {
+    font-family: 'Pixeloid Sans';
+    src: url('../font/PixeloidSans-mLxMm.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Pixeloid Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/../media/background-rick-1.jpg');
+    background-size: cover; /* Растянуть изображение на весь экран */
+    background-repeat: no-repeat; /* Запретить повтор изображения */
+    background-attachment: fixed; /* Фиксированный фон */
+    background-position: bottom;
+}
+
+header {
+    font-family: 'Pixeloid Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#bottom-right-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1; /* Необязательно, задает порядок слоев (если нужно) */
+    height: 85vh;
+}
+
+.post-container {
+    margin-top: 142px;
+}
+
+.post-info {
+    background-color: #FFFFFF;
+    margin: 20px 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    background-color: #D7EC4F;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.post-footer {
+    background-color: #D7EC4F;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.post-body {
+    display: flex;
+}
+
+.views-text {
+    color: #5A6702;
+    font-size: 16px;
+}
+
+.post-title-text {
+    color: #005823;
+    font-size: 16px;
+}
+
+.post-anons-text {
+    margin: 20px 20px;
+}
+
+.learn-more-btn {
+    background-color: #04C300;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none; /* Убрать подчеркивание ссылки */
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resize-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0 16px;
+    margin-left: auto;
+}
+
+.project-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.learn-more-btn:hover {
+    background-color: #005823;
+}
+
+.alert-about-header {
+    background-color: #D7EC4F;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.alert-about-body-1 {
+    display: flex;
+    background-color: #FFFFFF;
+    height: 100px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+}
+
+.alert-about-body-2 {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 120px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.alert-about-body-3 {
+    display: flex;
+    background-color: #FFFFFF;
+    height: 100px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+}
+
+.alert-info-text {
+    margin: 0;
+    font-size: 24px;
+}
+
+.alert-about-1 {
+    z-index: 2;
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert-about-2 {
+    z-index: 2;
+    width: 600px;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert-about-3 {
+    z-index: 2;
+    width: 600px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    width: 24px;
+    height: 24px;
+    padding-right: 8px;
+    margin-left: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert-title-text {
+    font-size: 18px;
+    color: #005823;
+}
+
+.java-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}

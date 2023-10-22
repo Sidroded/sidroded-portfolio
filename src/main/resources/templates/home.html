@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css">
+</head>
+<body>
+
+<header>
+    <div class="first-header-bar">
+        <div class="sideded-logo">
+            <img th:src="@{/media/sidroded_logo.png}" alt="Sidroded Logo">
+        </div>
+        <span class="title">Sidroded</span>
+        <div class="icons">
+            <img th:src="@{/media/close_hide_share_btn.png}" alt="Minimize">
+        </div>
+    </div>
+
+    <div class="second-header-bar">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a th:href="@{/}" class="navbar-custom-text-active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a th:href="@{/portfolio}" class="navbar-custom-text">Portfolio</a></li>
+            <li class="nav-item"><a th:href="@{/links}" class="navbar-custom-text">Links</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="alert-about-1 hidden">
+    <div class="alert-about-header">
+        <img class="project-icon" th:src="@{/media/alert.png}" alt="project-icon">
+        <h3 class="alert-title-text" th:text="Warning"/>
+        <img class="close-btn" th:src="@{/media/close.png}" alt="close btn">
+    </div>
+
+    <div class="alert-about-body-1">
+        <p class="alert-info-text">Hi! My name is Daniil Deinekin! And that’s me :D</p>
+    </div>
+</div>
+
+<div class="alert-about-2 hidden">
+    <div class="alert-about-header">
+        <img class="project-icon" th:src="@{/media/alert.png}" alt="project-icon">
+        <h3 class="alert-title-text" th:text="Warning"/>
+        <img class="close-btn" th:src="@{/media/close.png}" alt="close btn">
+    </div>
+
+    <div class="alert-about-body-2">
+        <img class="java-logo" th:src="@{/media/java-logo.jpg}" alt="java logo">
+        <p class="alert-info-text">I'm Software Engineer with 2 years experience programing on Java.</p>
+    </div>
+</div>
+
+<div class="alert-about-3 hidden">
+    <div class="alert-about-header">
+        <img class="project-icon" th:src="@{/media/alert.png}" alt="project-icon">
+        <h3 class="alert-title-text" th:text="Warning"/>
+        <img class="close-btn" th:src="@{/media/close.png}" alt="close btn">
+    </div>
+
+    <div class="alert-about-body-3">
+        <p class="alert-info-text">Some info</p>
+    </div>
+</div>
+
+<img th:src="@{/media/sidroded.png}" alt="Sidroded" id="bottom-right-image">
+
+<script type="text/javascript" th:src="@{/js/home-script.js}"></script>
+
+<audio id="alert-audio" th:src="@{/js/alert-sound.mp3}" controls="controls" style="display: none;"></audio>
+
+</body>
+</html>

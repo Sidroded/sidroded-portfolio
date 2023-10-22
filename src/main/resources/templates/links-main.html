@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Links </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css">
+</head>
+<body>
+
+<header>
+    <div class="first-header-bar">
+        <div class="sideded-logo">
+            <img th:src="@{/media/sidroded_logo.png}" alt="Sidroded Logo">
+        </div>
+        <span class="title">Sidroded</span>
+        <div class="icons">
+            <img th:src="@{/media/close_hide_share_btn.png}" alt="Minimize">
+        </div>
+    </div>
+
+    <div class="second-header-bar">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a th:href="@{/}" class="navbar-custom-text">Home</a></li>
+            <li class="nav-item"><a th:href="@{/portfolio}" class="navbar-custom-text"> Portfolio</a></li>
+            <li class="nav-item"><a th:href="@{/links}" class="navbar-custom-text-active aria-current=page">Links</a></li>
+        </ul>
+    </div>
+</header>
+
+</body>
+</html>
