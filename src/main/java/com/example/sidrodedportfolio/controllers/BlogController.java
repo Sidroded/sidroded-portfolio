@@ -52,32 +52,32 @@ public class BlogController {
         return "blog-details";
     }
 
-    @GetMapping("/blog/{id}/edit")
+    @GetMapping("/portfolio/{id}/edit")
     public String blogEdit(@PathVariable(value = "id") String id, Model model) {
         if (!postRepository.existsById(id)) {
-            return "redirect:/blog";
+            return "redirect:/portfolio";
         }
 
         Optional<Post> post = postRepository.findById(id);
         List<Post> postArr = new ArrayList<>();
         post.ifPresent(postArr::add);
         model.addAttribute("post", postArr);
-        return "blog-edit";
+        return "portfolio-edit";
     }
 
-    @PostMapping("/blog/{id}/edit")
+    @PostMapping("/portfolio/{id}/edit")
     public String blogEditPost(@PathVariable(value = "id") String id, @RequestParam String title, @RequestParam String anons, @RequestParam String full_text) {
         Post post = postRepository.findById(id).orElseThrow();
         post.setTitle(title);
         post.setAnons(anons);
         post.setFull_text(full_text);
         postRepository.save(post);
-        return "redirect:/blog/" + id;
+        return "redirect:/portfolio/" + id;
     }
 
-    @PostMapping("/blog/{id}/delete")
+    @PostMapping("/portfolio/{id}/delete")
     public String blogRemovePost(@PathVariable(value = "id") String id) {
         postRepository.deleteById(id);
-        return "redirect:/blog";
+        return "redirect:/portfolio";
     }
 }

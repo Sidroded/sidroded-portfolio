@@ -21,8 +21,8 @@
         <h3 th:text="${el.title}"/>
         <p th:text="${el.full_text}"/>
         <p><b>Views: </b> <span th:text="${el.views}"/></p>
-        <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
-        <form th:action="'/blog/' + ${el.id} + '/delete '" method="post" >
+        <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
+        <form th:action="'/portfolio/' + ${el.id} + '/delete '" method="post" >
             <button class="btn btn-warning" type="submit">Delete</button>
         </form>
     </div>

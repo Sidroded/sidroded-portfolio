@@ -27,5 +27,23 @@
     </div>
 </header>
 
+<div class="post-container">
+    <div th:each="el : ${links}" class="post-info">
+        <div class="post-header">
+            <img class="project-icon" th:src="'https://drive.google.com/uc?export=download&id=' + ${el.image_id}" alt="project-icon">
+            <h3 class="post-title-text" th:text="${el.name}"/>
+            <img class="resize-btn" th:src="@{/media/resize-btn.png}" alt="resize btn">
+        </div>
+
+        <div class="post-body">
+            <a class="post-anons-text" th:href="${el.link}" th:text="${el.link}"/>
+        </div>
+
+        <div class="post-footer">
+            <a class="learn-more-btn" th:href="'/portfolio/' + ${el.id}">Learn more ></a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
