@@ -284,3 +284,10 @@ header {
     height: 100px;
     margin-right: 10px;
 }
+
+.project-container {
+    background-color: #F5FFB8;
+    margin: 142px 200px;
+    display: flex;
+    align-items: center;
+}

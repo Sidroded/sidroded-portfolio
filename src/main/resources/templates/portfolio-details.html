@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Blog </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css">
+</head>
+<body>
+
+<header class="header">
+    <div class="first-header-bar">
+        <div class="sideded-logo">
+            <img th:src="@{/media/sidroded_logo.png}" alt="Sidroded Logo">
+        </div>
+        <span class="title">Sidroded</span>
+        <div class="icons">
+            <img th:src="@{/media/close_hide_share_btn.png}" alt="Minimize">
+        </div>
+    </div>
+
+    <div class="second-header-bar">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a th:href="@{/}" class="navbar-custom-text">Home</a></li>
+            <li class="nav-item"><a th:href="@{/portfolio}" class="navbar-custom-text-active aria-current=page"> Portfolio</a></li>
+            <li class="nav-item"><a th:href="@{/links}" class="navbar-custom-text">Links</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="project-container">
+    <div th:each="el : ${post}" class="project-fill">
+        <h3 th:text="${el.title}"/>
+        <p th:text="${el.full_text}"/>
+        <p><b>Views: </b> <span th:text="${el.views}"/></p>
+        <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
+        <form th:action="'/portfolio/' + ${el.id} + '/delete '" method="post" >
+            <button class="btn btn-warning" type="submit">Delete</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

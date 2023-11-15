@@ -49,7 +49,7 @@ public class BlogController {
         post.setViews(post.getViews() + 1);
         postRepository.save(post);
         model.addAttribute("post", post);
-        return "blog-details";
+        return "portfolio-details";
     }
 
     @GetMapping("/portfolio/{id}/edit")
