@@ -29,13 +29,27 @@
 
 <div class="project-container">
     <div th:each="el : ${post}" class="project-fill">
-        <h3 th:text="${el.title}"/>
-        <p th:text="${el.full_text}"/>
-        <p><b>Views: </b> <span th:text="${el.views}"/></p>
-        <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
-        <form th:action="'/portfolio/' + ${el.id} + '/delete '" method="post" >
-            <button class="btn btn-warning" type="submit">Delete</button>
-        </form>
+
+        <div class="project-header">
+            <img class="project-icon" th:src="@{/media/sidroded_logo.png}" alt="sidroded-logo">
+            <h3 class="post-title-text" th:text="${el.title}"/>
+            <a class="close-link" th:href="@{/portfolio}"><img class="close-btn" th:src="@{/media/close.png}" alt="close btn"></a>
+        </div>
+
+        <div class="project-info">
+            <h3 th:text="${el.title}"/>
+            <p th:text="${el.full_text}"/>
+            <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
+
+            <form th:action="'/portfolio/' + ${el.id} + '/delete '" method="post" >
+                <button class="btn btn-warning" type="submit">Delete</button>
+            </form>
+        </div>
+
+        <div class="post-footer">
+            <span class="views-text" th:text="'Views: ' + ${el.views}"/>
+            <a class="learn-more-btn" th:href="@{/portfolio}">CLOSE</a>
+        </div>
     </div>
 </div>
 

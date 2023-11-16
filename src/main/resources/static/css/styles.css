@@ -288,6 +288,20 @@ header {
 .project-container {
     background-color: #F5FFB8;
     margin: 142px 200px;
+}
+
+.project-header {
+    background-color: #D7EC4F;
+    height: 50px;
     display: flex;
     align-items: center;
+}
+
+.project-info {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.close-link {
+    margin-left: auto;
 }
