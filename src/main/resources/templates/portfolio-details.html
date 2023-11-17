@@ -36,9 +36,8 @@
             <a class="close-link" th:href="@{/portfolio}"><img class="close-btn" th:src="@{/media/close.png}" alt="close btn"></a>
         </div>
 
-        <div class="project-info">
-            <h3 th:text="${el.title}"/>
-            <p th:text="${el.full_text}"/>
+        <div class="project-info" th:each="text : ${htmlFullText}">
+            <div class="project-full-text" th:utext="${htmlFullText}"></div>
             <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
 
             <form th:action="'/portfolio/' + ${el.id} + '/delete '" method="post" >

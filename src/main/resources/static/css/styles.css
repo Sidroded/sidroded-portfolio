@@ -87,6 +87,11 @@
     src: url('../font/PixeloidSans-mLxMm.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'BlenderPro';
+    src: url('../font/BlenderPro-Medium.ttf') format('truetype');
+}
+
 body {
     font-family: 'Pixeloid Sans', sans-serif;
     margin: 0;

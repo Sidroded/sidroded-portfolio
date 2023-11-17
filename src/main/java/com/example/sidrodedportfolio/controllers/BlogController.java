@@ -2,6 +2,7 @@ package com.example.sidrodedportfolio.controllers;
 
 import com.example.sidrodedportfolio.database.repository.PostRepository;
 import com.example.sidrodedportfolio.models.Post;
+import com.example.sidrodedportfolio.utils.MarkdownConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,7 +48,10 @@ public class BlogController {
 
         Post post = postRepository.findById(id).orElseThrow();
         post.setViews(post.getViews() + 1);
+        String markdownFullProjectText = post.getFull_text();
+        String htmlFullText = MarkdownConverter.convertToHtml(markdownFullProjectText);
         postRepository.save(post);
+        model.addAttribute("htmlFullText", htmlFullText);
         model.addAttribute("post", post);
         return "portfolio-details";
     }
