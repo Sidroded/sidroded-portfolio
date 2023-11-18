@@ -36,6 +36,11 @@
             <a class="close-link" th:href="@{/portfolio}"><img class="close-btn" th:src="@{/media/close.png}" alt="close btn"></a>
         </div>
 
+        <div class="project-images">
+            <img class="project-image" th:src="'https://drive.google.com/uc?export=download&id=' + ${el.image_link_2}" alt="image preview">
+            <img class="project-image" th:src="'https://drive.google.com/uc?export=download&id=' + ${el.image_link_3}" alt="image preview">
+        </div>
+
         <div class="project-info" th:each="text : ${htmlFullText}">
             <div class="project-full-text" th:utext="${htmlFullText}"></div>
             <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>

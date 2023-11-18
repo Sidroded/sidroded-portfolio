@@ -310,3 +310,9 @@ header {
 .close-link {
     margin-left: auto;
 }
+
+.project-image {
+    width: 700px;
+    height: 350px;
+    padding: 10px;
+}
