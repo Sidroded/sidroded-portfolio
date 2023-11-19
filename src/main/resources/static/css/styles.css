@@ -165,6 +165,11 @@ header {
     margin: 20px 20px;
 }
 
+.post-preview {
+    height: 250px;
+    width: 250px;
+}
+
 .learn-more-btn {
     background-color: #04C300;
     color: #fff;
@@ -180,6 +185,9 @@ header {
     width: 36px;
     height: 36px;
     padding: 0 16px;
+}
+
+.resize-link {
     margin-left: auto;
 }
 
@@ -315,4 +323,28 @@ header {
     width: 700px;
     height: 350px;
     padding: 10px;
+}
+
+.git-hub-button:hover {
+    background-color: #005823;
+}
+
+.git-hub-button {
+    background-color: #04C300;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block; /* Чтобы использовать margin: 0 auto; */
+    margin: 0 auto;
+}
+
+.git-hub-container {
+    text-align: center;
+    margin: 10px 20px;
+}
+
+.project-fill {
 }

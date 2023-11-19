@@ -34,8 +34,8 @@ public class BlogController {
     }
 
     @PostMapping("/blog/add")
-    public String blogAddPost(@RequestParam String title, @RequestParam String anons, @RequestParam String full_text, @RequestParam int priority, @RequestParam String image_link_1, @RequestParam String image_link_2, @RequestParam String image_link_3, Model model) {
-        Post post = new Post(title, anons, full_text, image_link_1, image_link_2, image_link_3, priority);
+    public String blogAddPost(@RequestParam String title, @RequestParam String anons, @RequestParam String full_text, @RequestParam int priority, @RequestParam String image_link_1, @RequestParam String image_link_2, @RequestParam String image_link_3, @RequestParam String git_hub_link, Model model) {
+        Post post = new Post(title, anons, full_text, image_link_1, image_link_2, image_link_3, git_hub_link, priority);
         postRepository.save(post);
         return "redirect:/portfolio";
     }

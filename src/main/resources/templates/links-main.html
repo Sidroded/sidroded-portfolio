@@ -32,7 +32,7 @@
         <div class="post-header">
             <img class="project-icon" th:src="'https://drive.google.com/uc?export=download&id=' + ${el.image_id}" alt="project-icon">
             <h3 class="post-title-text" th:text="${el.name}"/>
-            <img class="resize-btn" th:src="@{/media/resize-btn.png}" alt="resize btn">
+            <a th:class="resize-link" th:href="${el.link}"><img class="resize-btn" th:src="@{/media/resize-btn.png}" alt="resize btn"></a>
         </div>
 
         <div class="post-body">

@@ -14,13 +14,14 @@ public class Post {
     private String image_link_1;
     private String image_link_2;
     private String image_link_3;
+    private String git_hub_link;
     private int priority;
     private int views;
 
     public Post() {
     }
 
-    public Post(String title, String anons, String full_text, String image_link_1, String image_link_2, String image_link_3, int priority) {
+    public Post(String title, String anons, String full_text, String image_link_1, String image_link_2, String image_link_3, String git_hub_link, int priority) {
         this.title = title;
         this.anons = anons;
         this.full_text = full_text;
@@ -58,6 +59,14 @@ public class Post {
 
     public void setImage_link_3(String image_link_3) {
         this.image_link_3 = image_link_3;
+    }
+
+    public String getGit_hub_link() {
+        return git_hub_link;
+    }
+
+    public void setGit_hub_link(String git_hub_link) {
+        this.git_hub_link = git_hub_link;
     }
 
     public int getPriority() {

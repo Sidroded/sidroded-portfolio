@@ -43,11 +43,10 @@
 
         <div class="project-info" th:each="text : ${htmlFullText}">
             <div class="project-full-text" th:utext="${htmlFullText}"></div>
-            <a th:href="'/portfolio/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br><br>
+        </div>
 
-            <form th:action="'/portfolio/' + ${el.id} + '/delete '" method="post" >
-                <button class="btn btn-warning" type="submit">Delete</button>
-            </form>
+        <div class="git-hub-container">
+            <a class="git-hub-button" th:href="${el.git_hub_link}">Explore GitHub</a>
         </div>
 
         <div class="post-footer">

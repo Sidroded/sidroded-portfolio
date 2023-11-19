@@ -30,9 +30,9 @@
 <div class="post-container">
     <div th:each="el : ${posts}" class="post-info">
         <div class="post-header">
-            <img class="project-icon" th:src="@{/media/project-icon.png}" alt="project-icon">
+            <img class="project-icon" th:src="@{/media/sidroded_logo.png}" alt="sidroded_logo">
             <h3 class="post-title-text" th:text="${el.title}"/>
-            <img class="resize-btn" th:src="@{/media/resize-btn.png}" alt="resize btn">
+            <a class="resize-link" th:href="'/portfolio/' + ${el.id}"><img class="resize-btn" th:src="@{/media/resize-btn.png}" alt="resize btn"></a>
         </div>
 
         <div class="post-body">
